@@ -1,6 +1,9 @@
 <template>
 	<view class="boxf-w750 bgc-f5">
-		
+		<button v-if="!isLogin" type="primary" class="get-user-info" open-type="getUserInfo" @click="getUserInfo">ss</button>
+		<view class="boxf-b20 flex-cncc login-box">
+			<index-login></index-login>
+		</view>
 		
 		<view class="boxf-b20">
 			<index-decalre></index-decalre>
@@ -15,12 +18,14 @@
 </template>
 
 <script>
+	import indexLogin from "../../components/indexLogin.vue"
 	import indexIcon from "../../components/indexIcon.vue"
 	import indexCard from "../../components/indexCard.vue"
 	import indexDecalre from "../../components/indexDeclare.vue"
 	export default {
 		data() {
 			return {
+				isLogin:false,
 				title:'工商服务',
 				title2:'财税服务',
 				title3:'更多',
@@ -86,16 +91,43 @@
 			}
 		},
 		methods: {
-
+			getUserInfo:function(){
+				global.isLogin = true;
+				this.isLogin = global.isLogin;
+				console.log('get user info')
+			}
 		},
 		components:{
 			indexIcon,
 			indexCard,
-			indexDecalre
+			indexDecalre,
+			indexLogin
 		}
 	}
 </script>
 
 <style>
-
+	.login-box{
+		position: relative;
+		width: 100vw;
+		z-index: 100;
+	}
+	.login-box:before{
+		position: absolute;
+		top: 0;
+		left: -7vw;
+		content: " ";
+		width: 114%;
+		height: 100upx;
+		border-radius: 0 0 100upx 100upx;
+		background-color: #0E8EFF;
+		z-index: -1;
+	},
+	.get-user-info{
+		position: absolute;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(255,255,255,0)!important;
+		z-index: 10000;
+	}
 </style>

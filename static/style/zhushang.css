@@ -79,6 +79,8 @@
 .border-right-1px-s-0{border-right: 1px solid #000000;}
 .border-right-1px-s-f{border-right: 1px solid #FFFFFF;}
 
+.boxf{box-sizing: border-box;}
+
 .boxf-w40{width: 40upx;}
 .boxf-w140{width: 140upx;}
 .boxf-w330{width: 330upx;}
@@ -97,6 +99,8 @@
 .boxf-h160{height: 160upx;}
 .boxf-h200{height: 200upx;}
 .boxf-h220{height: 220upx;}
+
+.boxf-mw480{min-width: 480upx;}
 
 .boxf-l10{margin-left: 10upx;}
 .boxf-l20{margin-left: 20upx;}

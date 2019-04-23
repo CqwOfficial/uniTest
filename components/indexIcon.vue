@@ -91,12 +91,13 @@
 		content: attr(data-text);
 		top: -10%;
 		right:-25%;
-		width: 35upx;
-		height: 35upx;
+		width: 33upx;
+		height: 33upx;
 		border-radius: 50%;
 		color: #FFFFFF;
 		font-size: 22upx;
-		line-height: 36upx;
+		text-align: center;
+		line-height: 35upx;
 		font-family: "PingFangSC-Medium";
 		background-color: #FF3300;
 		z-index: 100;

@@ -11,6 +11,7 @@
 		}
 	}
 	global.num = 0;
+	global.isLogin = false;
 </script>
 
 <style>
