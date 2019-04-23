@@ -1,0 +1,191 @@
+/*  col 用于设置字体颜色 */
+.col-F{color: #FFFFFF;}
+.col-3{color: #333333;}
+.col-8{color: #888888;}
+.col-0E8EFF{color: #0E8EFF;}
+.col-75BEFF{color: #75BEFF;}
+.col-F5F5F5{color: #F5F5F5}
+.col-E5E5E5{color: #E5E5E5;}
+
+/*  bg-col 用于设置背景颜色样式 */
+.bg-col-F{ background-color: #FFFFFF; }
+.bg-col-0E8EFF{ background-color: #0E8EFF; }
+.bg-col-75BEFF{ background-color: #75BEFF;}
+.bg-col-F5F5F5{ background-color: #F5F5F5 }
+.bg-col-D8D8D8{ background-color: #D8D8D8; }
+.bg-col-E5E5E5{ background-color: #E5E5E5;}
+
+/*  img 用于设置图片样式 */
+.img-35{ width: 35upx; height: 35upx; }
+.img-40{ width: 40upx; height: 40upx; }
+.img-50{ width: 50upx; height: 50upx; }
+.img-100{ width: 100upx; height: 100upx;}
+.img-120{ width: 120upx; height: 120upx; }
+.img-300x80{ width: 300upx; height: 80upx;}
+
+/*  font-family 用于设置字体样式 */
+.ffm-pfl{font-family: "PingFangSC-Light";}
+.ffm-pfr{font-family: "PingFangSC-Regular";}
+
+/* fli 用于设置行高和字体大小 */
+.fli-82x30{line-height: 82upx; font-size: 30upx;} /* 加 40单位 行高间距 */
+.fli-56x40{line-height: 56upx; font-size: 40upx;}
+.fli-38x26{line-height: 38upx; font-size: 26upx;}
+.fli-54x24{line-height: 54upx; font-size: 24upx;} /* 加 20单位 行高间距 */
+.fli-48x34{line-height: 48upx; font-size: 34upx;}
+.fli-48x28{line-height: 48upx; font-size: 28upx;}
+.fli-42x30{line-height: 42upx; font-size: 30upx;}
+.fli-40x28{line-height: 40upx; font-size: 28upx;}
+.fli-34x24{line-height: 34upx; font-size: 24upx;}
+.fli-30x22{line-height: 30upx; font-size: 22upx;}
+.fli-28x20{line-height: 28upx; font-size: 20upx;}
+
+/*  border 用于设置边框样式 */
+.border-1px-0{border: 1px solid #000000;}
+.border-1px-3{border: 1px solid #333333;}
+.border-1px-8{border: 1px solid #888888;}
+.border-1px-97{border: 1px solid #979797;}
+.border-1px-0E8EFF{border: 1px solid #0E8EFF;}
+
+.border-bot-1px-d-0{border-bottom: 1px dashed #000000;}
+.border-bot-1px-s-0{border-bottom: 1px solid #000000;}
+.border-bot-1px-s-f{border-bottom: 1px solid #FFFFFF;}
+
+.border-top-1px-s-F5{border-top: 1px solid #F5F5F5;}
+
+.border-bot-1px-s-E5{border-bottom: 1px solid #E5E5E5;}
+
+/* line 型线 修饰用 线状标签样式 */
+.line-1px-104w{font-size: 0;height: 0;width: 104upx;}
+.line-1px-30w {font-size: 0;height: 0;width: 30upx;border: 1upx solid #FFFFFF;}
+
+/* block-w 用于 区分设置 某些规定宽度 的 块元素 */
+.block-w8{width: 280upx;} /* 根据 font=34 设置的 35 字符宽度单位 */
+.block-w7{width: 245upx;}
+.block-w6{width: 210upx;}
+.block-w5{width: 175upx;}
+.block-w4{width: 140upx;}
+.block-w3{width: 105upx;}
+.block-w2{width: 70upx;}
+
+/* lock-h 锁死高度 */
+.lock-h48{ height: 48upx;}
+
+/* line-w 用于 设置 某些规定宽度 的 行元素 140+510 +40l+30r+30m */
+.line-w510{width: 510upx;}
+.line-w520{width: 520upx;}
+.line-w710{ width: 710upx;}
+.line-w110{ width: 110upx;}
+.line-w180{ width: 180upx;}
+.line-w220{ width: 220upx;}
+
+.line-input-w110x2{ min-width: 110upx; max-width: 220upx;} /* 5-10个字符 因为单价和数量不可能超过这种字符数 */
+
+/* boxf 用于重复指定 margin 距离 */
+.boxf-w40{width: 40upx;}
+.boxf-w140{width: 140upx;}
+.boxf-w150{width: 150upx;}
+.boxf-w250{width: 250upx;}
+.boxf-w400{width: 400upx;}
+.boxf-w50{width: 500upx;}
+.boxf-w510{width: 510upx;}
+.boxf-w610{width: 610upx;}
+.boxf-w710{width: 710upx;}
+.boxf-100vw{width: 100vw;}
+.boxf-100pct{width: 100%;}
+
+.boxf-h20{height: 20upx;}
+.boxf-h40{height: 40upx;}
+.boxf-h100{height: 100upx;}
+.boxf-h200{height: 200upx;}
+
+.boxf-30{margin: 30upx;}
+
+.boxf-t10{margin-top: 10upx;}
+.boxf-t15{margin-top: 15upx;}
+.boxf-t20{margin-top: 20upx;}
+.boxf-t30{margin-top: 30upx;}
+.boxf-t40{margin-top: 40upx;}
+.boxf-t50{margin-top: 50upx;}
+.boxf-t60{margin-top: 60upx;}
+.boxf-t70{margin-top: 70upx;}
+.boxf-t80{margin-top: 80upx;}
+.boxf-t90{margin-top: 90upx;}
+.boxf-t100{margin-top: 100upx;}
+.boxf-t140{margin-top: 140upx;}
+.boxf-t200{margin-top: 200upx;}
+.boxf-t340{margin-top: 340upx;}
+.boxf-t500{margin-top: 500upx;}
+.boxf-t1000{margin-top: 1000upx;}
+
+.boxf-tn10{margin-top: -10upx;}
+
+
+
+.boxf-b10{margin-bottom: 10upx;}
+.boxf-b15{margin-bottom: 15upx;}
+.boxf-b20{margin-bottom: 20upx;}
+.boxf-b30{margin-bottom: 30upx;}
+.boxf-b40{margin-bottom: 40upx;}
+.boxf-b50{margin-bottom: 50upx;}
+.boxf-b60{margin-bottom: 60upx;}
+.boxf-b70{margin-bottom: 70upx;}
+.boxf-b100{margin-bottom: 100upx;}
+
+.boxf-l10{margin-left: 10upx;}
+.boxf-l20{margin-left: 20upx;}
+.boxf-l30{margin-left: 30upx;}
+.boxf-l35{margin-left: 35upx;}
+.boxf-l40{margin-left: 40upx;}
+.boxf-l50{margin-left: 50upx;}
+.boxf-l72{margin-left: 72upx;}
+.boxf-l100{margin-left: 100upx;}
+
+.boxf-r10{margin-right: 10upx;}
+.boxf-r20{margin-right: 20upx;}
+.boxf-r30{margin-right: 30upx;}
+.boxf-r40{margin-right: 40upx;}
+.boxf-r102{margin-right: 102upx;}
+
+/*  both-end 用于行内文字两端对齐 */
+.justify-box{ text-align: justify; } /* 父元素添加 */
+.justify{ display: inline-block; width: 100%;} /* 父元素内的 span标签 添加 */
+
+/* rotate 设置旋转 */
+.rotate-90{transform:rotate(90deg);}
+.rotate-180{transform:rotate(180deg);}
+.rotate-270{transform:rotate(270deg);}
+
+/* border-radius 圆角 */
+.cir-t10{border-radius: 10upx 10upx 0 0;}
+.cir-b10{border-radius: 0 0 10upx 10upx;}
+
+/* fixed 底部遮挡 */
+.fixbot-h110{position: fixed; height: 110upx; width: 100vw;}
+.fixbot-h160{position: fixed; height: 160upx; width: 100vw;}
+
+/* input > placeholder 样式 */
+.placeholder-s{line-height: 40upx; font-size: 28upx; color: #888;}
+
+/* 文字朝向 */
+.ftf-r{text-align: right;}
+.ftf-c{text-align: center;}
+.ftf-w700{font-weight: 700;}
+
+/* 中划线 center-line */
+.cine{ text-decoration:line-through;}
+
+/* button 样式 */
+.btn-capsule-5times-w250{width: 250upx; height: 100upx; border-radius: 50upx;}
+.btn-capsule-160x60{width: 150upx; height: 60upx; border-radius: 30upx;}
+
+/* ul > li > title li左侧title  固定140 右侧info 510 左右间距40  box左侧40右侧20 正好750*/
+ul > li > .inv-title{
+	width: 140upx;
+}
+ul > li > .inv-info{
+	width: 510upx; 
+}
+ul > li > .inv-innel{
+	width: 255upx;
+}

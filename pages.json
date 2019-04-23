@@ -1,0 +1,115 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "uni-app"
+			}
+		}
+        ,{
+            "path" : "pages/business/license/license",
+            "style" : {
+				"navigationBarTitleText": "营业执照"
+			}
+        }
+        ,{
+            "path" : "pages/business/annual/annual",
+            "style" : {
+				"navigationBarTitleText": "工商年报"
+			}
+        }
+        ,{
+            "path" : "pages/business/cancel/cancel",
+            "style" : {
+				"navigationBarTitleText": "注销/变更"
+			}
+        }
+        ,{
+            "path" : "pages/tax/create/create",
+            "style" : {
+				"navigationBarTitleText": "开发票"
+			}
+        }
+        ,{
+            "path" : "pages/tax/invoice/invoice",
+            "style" : {
+				"navigationBarTitleText": "发票管理"
+			}
+        }
+        ,{
+            "path" : "pages/tax/declare/declare",
+            "style" : {
+				"navigationBarTitleText": "纳税申报"
+			}
+        }
+        ,{
+            "path" : "pages/more/bank/bank",
+            "style" : {
+				"navigationBarTitleText": "银行开户"
+			}
+        }
+        ,{
+            "path" : "pages/more/seal/seal",
+            "style" : {
+				"navigationBarTitleText": "公章管理"
+			}
+        }
+        ,{
+            "path" : "pages/more/call/call",
+            "style" : {
+				"navigationBarTitleText": "联系客服"
+			}
+        }
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"condition": { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式（list 的索引项）
+		"list": [
+			{
+				"name": "index",
+				"path": "pages/index/index"
+			},
+			{
+				"name": "营业执照-主页",
+				"path": "pages/business/license/license"
+			},
+			{
+				"name": "工商年报-主页",
+				"path": "pages/business/annual/annual"
+			},
+			{
+				"name": "注销/变更-主页",
+				"path": "pages/business/cancel/cancel"
+			},
+			{
+				"name": "开发票-主页",
+				"path": "pages/tax/create/create"
+			},
+			{
+				"name": "发票管理-主页",
+				"path": "pages/tax/invoice/invoice"
+			},
+			{
+				"name": "纳税申报-主页",
+				"path": "pages/tax/declare/declare"
+			},
+			{
+				"name": "银行开户-主页",
+				"path": "pages/more/bank/bank"
+			},
+			{
+				"name": "公章管理-主页",
+				"path": "pages/more/seal/seal"
+			},
+			{
+				"name": "联系客服-主页",
+				"path": "pages/more/call/call"
+			}
+		]
+	}
+}
