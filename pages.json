@@ -60,6 +60,27 @@
 				"navigationBarTitleText": "联系客服"
 			}
         }
+        ,{
+            "path" : "pages/register/inputCdk",
+            "style" : {
+				"navigationBarTitleText": "输入邀请码",
+				"disableScroll":true
+			}
+        }
+		,{
+            "path" : "pages/register/chooseTrade",
+            "style" : {
+				"navigationBarTitleText": "选择经营范围",
+				"disableScroll":true
+			}
+        }
+		,{
+            "path" : "pages/register/auditName",
+            "style" : {
+				"navigationBarTitleText": "核名",
+				"disableScroll":true
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
@@ -109,6 +130,18 @@
 			{
 				"name": "联系客服-主页",
 				"path": "pages/more/call/call"
+			},
+			{
+				"name": "邀请码输入-注册流程",
+				"path": "pages/register/inputCdk"
+			},
+			{
+				"name": "选择经营范围-注册流程",
+				"path": "pages/register/chooseTrade"
+			},
+			{
+				"name": "核名-注册流程",
+				"path": "pages/register/auditName"
 			}
 		]
 	}

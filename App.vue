@@ -1,4 +1,5 @@
 <script>
+	import gFn from "./static/js/gFn.js"
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
@@ -10,8 +11,9 @@
 			console.log('App Hide')
 		}
 	}
-	global.num = 0;
+	global.time = 0;
 	global.isLogin = false;
+	global.gFn = gFn;
 </script>
 
 <style>

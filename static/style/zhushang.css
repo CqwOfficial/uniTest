@@ -42,11 +42,17 @@
 
 .fm-pfl{font-family: "PingFangSC-Light";}
 .fm-pfr{font-family: "PingFangSC-Regular";}
+.fm-pfs{font-family: "PingFangSC-Semibold";}
 
-.flx82x30{line-height: 82upx; font-size: 30upx;} 
+.flx82x30{line-height: 82upx; font-size: 30upx;}
+.flx80x34{line-height: 80upx; font-size: 34upx;}
+.flx70x56{line-height: 70upx; font-size: 56upx;}
+.flx70x30{line-height: 70upx; font-size: 30upx;}
 .flx56x40{line-height: 56upx; font-size: 40upx;}
+.flx50x36{line-height: 50upx; font-size: 36upx;}
 .flx38x26{line-height: 38upx; font-size: 26upx;}
 .flx54x24{line-height: 54upx; font-size: 24upx;} 
+.flx46x32{line-height: 46upx; font-size: 32upx;} 
 .flx48x34{line-height: 48upx; font-size: 34upx;}
 .flx48x28{line-height: 48upx; font-size: 28upx;}
 .flx42x30{line-height: 42upx; font-size: 30upx;}
@@ -61,6 +67,8 @@
 .border-1px-3{border: 1px solid #333333;}
 .border-1px-8{border: 1px solid #888888;}
 .border-1px-97{border: 1px solid #979797;}
+.border-1px-e5{border: 1px solid #E5E5E5;}
+.border-1px-0e8eff{border: 1px solid #0E8EFF;}
 
 .border-bot-1px-d-0{border-bottom: 1px dashed #000000;}
 .border-bot-1px-s-0{border-bottom: 1px solid #000000;}
@@ -70,6 +78,7 @@
 .border-top-1px-d-0{border-top: 1px dashed #000000;}
 .border-top-1px-s-0{border-top: 1px solid #000000;}
 .border-top-1px-s-f{border-top: 1px solid #FFFFFF;}
+.border-top-1px-s-e5{border-top: 1px solid #E5E5E5;}
 
 .border-left-1px-d-0{border-left: 1px dashed #000000;}
 .border-left-1px-s-0{border-left: 1px solid #000000;}
@@ -90,6 +99,7 @@
 .boxf-w660{width: 660upx;}
 .boxf-w690{width: 690upx;}
 .boxf-w710{width: 710upx;}
+.boxf-w720{width: 720upx;}
 .boxf-w750{width: 750upx;}
 
 .boxf-h20{height: 20upx;}
@@ -114,12 +124,18 @@
 .boxf-r40{margin-right: 40upx;}
 .boxf-r120{margin-right: 120upx;}
 
+.boxf-t1{margin-top: 1upx;}
 .boxf-t10{margin-top: 10upx;}
+.boxf-t5-n{margin-top: -5upx;}
 .boxf-t15{margin-top: 15upx;}
 .boxf-t20{margin-top: 20upx;}
 .boxf-t30{margin-top: 30upx;}
 .boxf-t40{margin-top: 40upx;}
 .boxf-t50{margin-top: 50upx;}
+.boxf-t70{margin-top: 70upx;}
+.boxf-t100{margin-top: 100upx;}
+.boxf-t140{margin-top: 140upx;}
+.boxf-t200{margin-top: 200upx;}
 
 .boxf-b10{margin-bottom: 10upx;}
 .boxf-b15{margin-bottom: 15upx;}
@@ -130,9 +146,12 @@
 
 .boxf-m30{margin: 30upx;}
 
+.boxf-pt10{padding-top: 10upx;}
+
 .txt-jus{text-align: justify;}
 .txt-r{text-align: right;}
 .txt-c{text-align: center;}
+.txt-vc{vertical-align: center;}
 .txt-l{text-align: left;}
 .txt-cine{text-decoration: line-through;}
 .txt-shadow{text-shadow: 10upx 5upx 10upx #E5E5E5;}
