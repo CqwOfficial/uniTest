@@ -81,6 +81,27 @@
 				"disableScroll":true
 			}
         }
+		,{
+            "path" : "pages/register/robotCheckName",
+            "style" : {
+				"navigationBarTitleText": "核名-远程查询",
+				"disableScroll":true
+			}
+        }
+        ,{
+            "path" : "pages/register/bindPhone",
+            "style" : {
+				"navigationBarTitleText": "核名-绑定手机",
+				"disableScroll":true
+			}
+        }
+		,{
+            "path" : "pages/register/getIdCard",
+            "style" : {
+				"navigationBarTitleText": "核名-拍摄/上传身份证",
+				"disableScroll":true
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
@@ -142,6 +163,18 @@
 			{
 				"name": "核名-注册流程",
 				"path": "pages/register/auditName"
+			},
+			{
+				"name": "核名-远程查询-注册流程",
+				"path": "pages/register/robotCheckName"
+			},
+			{
+				"name": "核名-绑定手机-注册流程",
+				"path": "pages/register/bindPhone"
+			},
+			{
+				"name": "核名-拍摄/上传身份证-注册流程",
+				"path": "pages/register/getIdCard"
 			}
 		]
 	}

@@ -25,7 +25,7 @@
 					type="text"
 					value="" 
 					placeholder="店铺名称，2~4个简体汉字"
-					placeholder-class= "font-3 placeholder-s"/>
+					placeholder-class= "fm-pfl flx40x28 col-8"/>
 			</view>
 		</view>
 		
@@ -33,16 +33,16 @@
 			<view class="boxf-w140 boxf-h80 txt-jus fm-pfl flx80x34 col-3">店铺后缀<span class="jus"></span></view>
 			<view class="boxf-w520 boxf-l30 flex-rnsc boxf-h80">
 				
-					<picker class="pick pick-repair "
+					<picker class="fm-pfl flx40x28 col-3"
 						mode="multiSelector"
 						@click="picking"
 						@columnchange="changePickData" 
 						:value="arrIndex" 
 						:range="arr">
-						<view v-if="!pickerSwitch" @click="createPick" class="font-1">点击选择店铺后缀</view>
+						<view v-if="!pickerSwitch" @click="createPick" class="fm-pfl flx40x28 col-8">点击选择店铺后缀</view>
 						<view
 							v-if="pickerSwitch"
-							class="font-1 pick-view">{{arr[0][arrIndex[0]]}}{{arr[1][arrIndex[1]]}}</view>
+							class="fm-pfl flx40x28 col-3">{{arr[0][arrIndex[0]]}}{{arr[1][arrIndex[1]]}}</view>
 					</picker>
 				
 			</view>
@@ -66,6 +66,23 @@
 			</view>
 		</view>
 		
+		<view class="tips boxf-t100 flex-cnsc" v-if="showTips">
+			<view class="tips-block flex-cnss cir-10 ">
+				<span class="fm-pfl flx42x30 col-3 flex-c boxf-b20">名称不可用</span>
+				<span class="fm-pfl flx40x28 col-3 boxf-b20">1、字号应为2~4个简体汉字</span>
+				<span class="fm-pfl flx40x28 col-3 boxf-b20">1、字号应为2~4个简体汉字</span>
+				<span class="fm-pfl flx40x28 col-3 boxf-b20">3、不能含有受保护的品牌词汇</span>
+				<span class="fm-pfl flx40x28 col-3 boxf-b20">4、不能含有暴力、恐怖、色情词汇</span>
+				<span class="fm-pfl flx40x28 col-3 boxf-b20">5、不能含有国家领导人、历史名人姓名</span>
+				<span class="fm-pfl flx40x28 col-3 boxf-b20">6、不能含有国家、地区、国际组织名称</span>
+			</view>
+			<view class="tips-btn" >
+				<image @click="closeTips" class="imgx60 boxf-t30" src="../../static/img/icon/no.png" mode=""></image>
+			</view>
+			
+		</view>
+		<view class="tips-bg" v-if="showTips"></view>
+		
 		
 	</view>
 </template>
@@ -76,6 +93,7 @@
 			return {
 				shopName: '', // 店铺字号
 				shopTitle: '', // 店铺后缀
+				showTips:false, // 检测到违规词后弹出
 				beforeName: '食品', // changePickData 内 拼接店铺后缀 的 前半部分
 				afterName: '店', // changePickData 内 拼接店铺后缀 的 后半部分
 				pickerSwitch: false, // 控制 是否 开启 pick 选择器
@@ -143,72 +161,126 @@
 				// console.log(this.shopName);
 				// console.log(this.shopTitle)
 				var _this = this;
-				
+				global.setCompName = this.shopName+this.shopTitle+"";
 				var g = new Date().getDate();
+				
+				// 先判断有没有 time，如果有，则赋给本地 如果没有，则添加
 				uni.getStorage({
-					key: 'date',
+					key: 'time',
 					success: (res) => {
-						if(res.data != g){
-							uni.showModal({
-								title: '提示',
-								content: '今天两次核名机会已用完',
-								showCancel:false
-							});
-						}
+						_this.time = res.data;
 					},
-					fail:(res)=>{
+					fail: () => {
 						uni.setStorage({
-							key: 'date',
-							data: g
-						});
+							key:'time',
+							data: _this.time
+						})
 					}
 				})
 				
-				
 				uni.getStorage({
-					key: 'time',
-					success: function (res) {
-						_this.time = res.data;
-						if(res.data>=2){
-							uni.showModal({
-								title: '提示',
-								content: '今天两次核名机会已用完',
-								showCancel:false
-							});
-						}else if(res.data<2){
-							++_this.time;
-							uni.showModal({
-								title: '提示',
-								content: '每天只有 2 次核名机会',
-								success: function (res) {
-									if (res.confirm) {
-										uni.setStorage({
-											key: 'time',
-											data: _this.time
-										});
-										uni.showLoading({
-											title: "字号检查中",
-											success: ()=>{
-												setTimeout(function () {
-													uni.hideLoading();
-												}, 2000);
+					key: 'date',
+					success: (res) => {
+						uni.getStorage({
+							key:'time',
+							success: (res1) => {
+								if(res1.data<2){
+									uni.showModal({
+										title: '提示',
+										content: '每天只有 2 次核名机会',
+										success: (res2) => {
+											if (res2.confirm) {
+												++_this.time;
+												uni.setStorage({
+													key: 'time',
+													data: _this.time
+												});
+												uni.setStorage({
+													key: 'date',
+													data:g
+												});
+												uni.showLoading({
+													title: "字号检查中",
+													success: ()=>{
+														// 调个接口查违规词
+														// uni.request({
+														// 	success: (res3) => {
+																// 接口没有，判断就注释掉了
+																uni.hideLoading();
+																// if(res3.data==false){
+																	// _this.showTips = true; // 如果 违规词接口判断返回 false，则认为不通过，弹出提示
+																// }else{
+																	// 否则 通过并跳转到下一阶段
+																	uni.navigateTo({
+																		url: './robotCheckName'
+																	})
+																// }
+																
+														// 	}
+														// })
+													}
+												})
+											} else if (res2.cancel) {
+												console.log('用户点击取消');
 											}
-										})
-									} else if (res.cancel) {
-										console.log('用户点击取消');
-									}
+										}
+									})
+								}else if(res1.data>=2){
+									uni.showModal({
+										title: '提示',
+										content: '今天两次核名机会已用完',
+										showCancel:false
+									});
 								}
-							});
-						}
+							}
+						})
+					},
+					fail: (res) => {
+						// 如果没有 date，添加今日 date
+						uni.setStorage({
+							key: 'date',
+							data: g,
+							success: () => {
+								uni.showModal({
+									title: '提示',
+									content: '每天只有 2 次核名机会',
+									success: () => {
+										if (res.confirm) {
+											++_this.time;
+											uni.setStorage({
+												key: 'time',
+												data: _this.time
+											});
+											uni.showLoading({
+												title: "字号检查中",
+												success: ()=>{
+													// 调个接口查违规词
+													// uni.request({
+													// 	success: (res3) => {
+															// 接口没有，判断就注释掉了
+															uni.hideLoading();
+															// if(res3.data==false){
+																// _this.showTips = true; // 如果 违规词接口判断返回 false，则认为不通过，弹出提示
+															// }else{
+																// 否则 通过并跳转到下一阶段
+																uni.navigateTo({
+																	url: './robotCheckName'
+																})
+															// }
+															
+													// 	}
+													// })
+												}
+											})
+										} else if (res.cancel) {
+											console.log('用户点击取消');
+										}
+									}
+								})
+							}
+						})
 					}
-				});
-				
-				
-				
-				
-				
-				
-				
+				})
 			},
 			changePickData: function(e) {
 				// console.log('修改的列为：' + e.detail.column + '，值为：' + e.detail.value)
@@ -224,6 +296,9 @@
 				
 				this.$forceUpdate(); // picker选择器店数据不会自动更新 必须使用强制刷新
 			},
+			closeTips:function(){
+				this.showTips = false;
+			}
 		}
 	}
 </script>
@@ -233,207 +308,29 @@
 		width: 100vw;
 		height: 100%;
 	}
-	
-	/* box与interval 的命名在后续会统一，
-	* interval 针对最外层容器设置距离
-	* box 针对内部容器调整距离 */
-	.interval{ margin-top: 20upx; }  /* 每个下方的 info块 与 上方块 的 间距 */
-	.interval-l { margin-left: 40upx;}
-	.interval-r { margin-right: 40upx;}
-	
-	.box-r{ margin-right: 20upx;}
-	.box-b-70{ margin-bottom: 70upx;}
-	.box-tttt{ margin-top: 100upx;}
-	
-	.title-lock{ height: 48upx; } /* 用于 在 单行状态下 锁死 title 块高 */
-	.border-1px{
-		border: 1upx solid #000000;
+	.tips{
+		position: absolute;
+		z-index: 1100;
+		
 	}
-	
-	.input-repair{ margin-top: -5upx;} /* 修复单行状态下 子元素为 input标签时 高度偏移的问题 */
-	.pick-repair{ margin-top: 4upx;}
-	.pick-nrepair{ margin-top: -8upx;}
-	/* 单独颜色 */
-	.col-0E8EFF{ color: #0E8EFF; }
-	.col-FFF{ color: #FFFFFF;}
-	.col-ccc{ color: #CCCCCC;}
-	.bg-col-0E8EFF{ background-color: #0E8EFF;}
-	.bg-col-FFF { background-color: #FFFFFF; border: 1px solid #cccccc;}
-	
-	
-	/* input > placeholder 样式 */
-	.placeholder-s{line-height: 40upx; font-size: 28upx;}
-	
-	/* 单独图片大小 */
-	.img-s{ width: 35upx; height: 35upx; }
-	
-	.line {
-		font-size: 0;
-		height: 0upx;
-		width: 30upx;
-		border: 2upx solid #FFFFFF;
-	}
-	/*  font 用于设置字体样式 */
-	.font-1{
-		font-family: "PingFangSC-Light";
-		color: #333;
-	}
-	.font-2{
-		font-family: "PingFangSC-Light";
-		color: #888;
-	}
-	.font-3{
-		font-family: "PingFangSC-Light";
-		color: #CCC;
-	}
-	.font-4{
-		font-family: "PingFangSC-Light";
-		color: #FFFFFF;
-	}
-	
-	/*  both-end 用于行内文字两端对齐 */
-	.justify-box{ text-align: justify; }
-	.justify{ display: inline-block; width: 100%;}
-	
-	/* tips 信息提示 部分 */
-	.tips {
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: flex-start;
-		align-items: center;
-		width: 100vw;
+	.tips-block{
+		position: relative;
+		width: 510upx;
+		height: 770upx;
+		padding: 30upx 40upx 0 40upx;
 		background-color: #FFFFFF;
+		z-index: 1200;
 	}
-	.tips-image-box{
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: flex-end;
-		align-items: center;
-		height: 220upx;
-		width: 100%;
+	.flex-c{align-self:center}
+	.tips-btn{
+		position: relative;
+		z-index: 1200;
 	}
-	.tips-image{
-		height: 120upx;
-		width: 120upx;
-	}
-	.tips-info{
-		margin-top: 32upx;
-		line-height: 56upx;
-		font-size: 40upx;
-	}
-	.tips-block{ /* 暂定 block 为 高度 45 && 拥有子元素 的 tips区内 的 元素 */
-		margin-top: 36upx;
-		line-height: 45upx;
-		font-size: 32upx;
-		display: flex;
-		flex-flow: row nowrap; 
-		justify-content: center;
-		align-items: center;
-	}
-	.tips-suggest{
-		margin-top: 10upx;
-		margin-bottom: 40upx;
-		line-height: 37upx;
-		font-size: 26upx;
-	}
-	
-	/* info 内容块 部分 */
-	.info{
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: center;
-		align-items: center;
+	.tips-bg{
+		position: absolute;
+		height: 100vh;
 		width: 100vw;
-		background-color: #FFFFFF;
-	}
-	.info1{
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: center;
-		align-items: center;
-		height: 1upx;
-		width: 90vw;
-		background-color: #E5E5E5;
-	}
-	.info-container{
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: flex-start;
-		align-items: flex-start;
-		margin-top: 30upx;
-		margin-bottom: 30upx;
-		width: 690upx;
-	}
-	.info-title-box{
-		min-width: 136upx;
-	}
-	.info-title{
-		font-size: 34upx;
-		line-height: 48upx;
-	}
-	.info-main-box{
-		margin-left: 30upx;
-		line-height: 48upx;
-		font-size: 34upx;
-	}
-	.info-line{
-		margin-top: 4upx; /* 因为 title块 的高度 和 line 的高度不一致 所以 line块 要增加差值高度 */
-		min-width: 524upx;
-		font-size: 28upx;
-		line-height: 40upx;
-	}
-	.info-line-between { /* 用于 info-line 内部为 2个 两端对齐元素时 的样式 */
-		display: flex;
-		flex-flow: row nowrap;
-		justify-content: space-between;
-		align-items: center;
-		margin-top: 4upx; /* 因为 title块 的高度 和 line 的高度不一致 所以 line块 要增加差值高度 */
-		min-width: 524upx;
-	}
-	.info-line-block {
-		font-size: 28upx;
-		line-height: 40upx;
-	}
-	
-	/* bot 常驻下方 按钮 */
-	.bot {
-		position: fixed;
-		bottom: 0;
-		height: 154upx;
-	}
-	.bot-btn{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 94upx;
-		width: 670upx;
-		border-radius: 10upx;
-	}
-	.bot-half-btn{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		height: 94upx;
-		width: 315upx;
-		border-radius: 10upx;
-	}
-	.bot-title{
-		height: 50upx;
-		line-height: 50upx;
-		font-size: 36upx;
-	}
-	
-	/* pick 独立样式 */
-	.pick{
-		display: flex;
-		flex-flow: column nowrap;
-		justify-content: center;
-		align-items: flex-start;
-		line-height: 40upx;
-		font-size: 28upx;
-		color: #333333;
-	}
-	.pick-view{
-		width: 300upx;
+		background-color: rgba(0,0,0,0.5);
+		z-index: 1000;
 	}
 </style>

@@ -39,6 +39,8 @@
 .imgx100{width: 100upx; height: 100upx;}
 .imgx120{width: 120upx; height: 120upx;}
 .imgx300x80{width: 300upx; height: 80upx;}
+.imgx400x400{width: 400upx; height: 400upx;}
+.imgx486x308{width: 486upx; height: 308upx;}
 
 .fm-pfl{font-family: "PingFangSC-Light";}
 .fm-pfr{font-family: "PingFangSC-Regular";}
@@ -97,6 +99,7 @@
 .boxf-w520{width: 520upx;}
 .boxf-w620{width: 620upx;}
 .boxf-w660{width: 660upx;}
+.boxf-w670{width: 670upx;}
 .boxf-w690{width: 690upx;}
 .boxf-w710{width: 710upx;}
 .boxf-w720{width: 720upx;}
@@ -106,9 +109,13 @@
 .boxf-h40{height: 40upx;}
 .boxf-h80{height: 80upx;}
 .boxf-h100{height: 100upx;}
+.boxf-h120{height: 120upx;}
 .boxf-h160{height: 160upx;}
 .boxf-h200{height: 200upx;}
 .boxf-h220{height: 220upx;}
+.boxf-h400{height: 400upx;}
+.boxf-h600{height: 600upx;}
+.boxf-h700{height: 700upx;}
 
 .boxf-mw480{min-width: 480upx;}
 
@@ -116,6 +123,7 @@
 .boxf-l20{margin-left: 20upx;}
 .boxf-l30{margin-left: 30upx;}
 .boxf-l40{margin-left: 40upx;}
+.boxf-l60{margin-left: 60upx;}
 .boxf-l120{margin-left: 120upx;}
 
 .boxf-r10{margin-right: 10upx;}
@@ -133,6 +141,7 @@
 .boxf-t40{margin-top: 40upx;}
 .boxf-t50{margin-top: 50upx;}
 .boxf-t70{margin-top: 70upx;}
+.boxf-t80{margin-top: 80upx;}
 .boxf-t100{margin-top: 100upx;}
 .boxf-t140{margin-top: 140upx;}
 .boxf-t200{margin-top: 200upx;}
@@ -169,3 +178,16 @@
 .fixed-h110{position: fixed; height: 110upx; width: 100vw;}
 .fixed-h160{position: fixed; height: 160upx; width: 100vw;}
 
+.hand{cursor:pointer;}
+
+.an{
+    transform: rotate(360deg);
+    animation: rotation 2 linear infinite;
+	-moz-animation: rotation 2 linear infinite; 
+    -webkit-animation: rotation 2s linear infinite;
+    -o-animation: rotation 2s linear infinite;
+}
+@keyframes rotation{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}

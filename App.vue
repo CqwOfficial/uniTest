@@ -13,7 +13,8 @@
 	}
 	global.time = 0;
 	global.isLogin = false;
-	global.gFn = gFn;
+	// global.gFn = gFn;
+	global.setCompName = "";
 </script>
 
 <style>
