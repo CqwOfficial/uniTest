@@ -1,6 +1,7 @@
 .col-f{color: #FFFFFF;}
 .col-3{color: #333333;}
 .col-8{color: #888888;}
+.col-f30{color: #FF3300;}
 
 .col-f5{color: #F5F5F5;}
 .col-e5{color: #E5E5E5;}
@@ -41,6 +42,7 @@
 .imgx300x80{width: 300upx; height: 80upx;}
 .imgx400x400{width: 400upx; height: 400upx;}
 .imgx486x308{width: 486upx; height: 308upx;}
+.imgx400x250{width: 400upx; height: 250upx;}
 
 .fm-pfl{font-family: "PingFangSC-Light";}
 .fm-pfr{font-family: "PingFangSC-Regular";}
@@ -50,8 +52,10 @@
 .flx80x34{line-height: 80upx; font-size: 34upx;}
 .flx70x56{line-height: 70upx; font-size: 56upx;}
 .flx70x30{line-height: 70upx; font-size: 30upx;}
+.flx58x26{line-height: 58upx; font-size: 26upx;}
 .flx56x40{line-height: 56upx; font-size: 40upx;}
 .flx50x36{line-height: 50upx; font-size: 36upx;}
+.flx50x26{line-height: 50upx; font-size: 26upx;}
 .flx38x26{line-height: 38upx; font-size: 26upx;}
 .flx54x24{line-height: 54upx; font-size: 24upx;} 
 .flx46x32{line-height: 46upx; font-size: 32upx;} 
@@ -95,6 +99,7 @@
 .boxf-w40{width: 40upx;}
 .boxf-w140{width: 140upx;}
 .boxf-w330{width: 330upx;}
+.boxf-w400{width: 400upx;}
 .boxf-w510{width: 510upx;}
 .boxf-w520{width: 520upx;}
 .boxf-w620{width: 620upx;}

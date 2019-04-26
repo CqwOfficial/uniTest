@@ -5,101 +5,102 @@
 			"style": {
 				"navigationBarTitleText": "uni-app"
 			}
-		}
-        ,{
-            "path" : "pages/business/license/license",
-            "style" : {
+		}, {
+			"path": "pages/business/license/license",
+			"style": {
 				"navigationBarTitleText": "营业执照"
 			}
-        }
-        ,{
-            "path" : "pages/business/annual/annual",
-            "style" : {
+		}, {
+			"path": "pages/business/annual/annual",
+			"style": {
 				"navigationBarTitleText": "工商年报"
 			}
-        }
-        ,{
-            "path" : "pages/business/cancel/cancel",
-            "style" : {
+		}, {
+			"path": "pages/business/cancel/cancel",
+			"style": {
 				"navigationBarTitleText": "注销/变更"
 			}
-        }
-        ,{
-            "path" : "pages/tax/create/create",
-            "style" : {
+		}, {
+			"path": "pages/tax/create/create",
+			"style": {
 				"navigationBarTitleText": "开发票"
 			}
-        }
-        ,{
-            "path" : "pages/tax/invoice/invoice",
-            "style" : {
+		}, {
+			"path": "pages/tax/invoice/invoice",
+			"style": {
 				"navigationBarTitleText": "发票管理"
 			}
-        }
-        ,{
-            "path" : "pages/tax/declare/declare",
-            "style" : {
+		}, {
+			"path": "pages/tax/declare/declare",
+			"style": {
 				"navigationBarTitleText": "纳税申报"
 			}
-        }
-        ,{
-            "path" : "pages/more/bank/bank",
-            "style" : {
+		}, {
+			"path": "pages/more/bank/bank",
+			"style": {
 				"navigationBarTitleText": "银行开户"
 			}
-        }
-        ,{
-            "path" : "pages/more/seal/seal",
-            "style" : {
+		}, {
+			"path": "pages/more/seal/seal",
+			"style": {
 				"navigationBarTitleText": "公章管理"
 			}
-        }
-        ,{
-            "path" : "pages/more/call/call",
-            "style" : {
+		}, {
+			"path": "pages/more/call/call",
+			"style": {
 				"navigationBarTitleText": "联系客服"
 			}
-        }
-        ,{
-            "path" : "pages/register/inputCdk",
-            "style" : {
+		}, {
+			"path": "pages/register/inputCdk",
+			"style": {
 				"navigationBarTitleText": "输入邀请码",
-				"disableScroll":true
+				"disableScroll": true
 			}
-        }
-		,{
-            "path" : "pages/register/chooseTrade",
-            "style" : {
+		}, {
+			"path": "pages/register/chooseTrade",
+			"style": {
 				"navigationBarTitleText": "选择经营范围",
-				"disableScroll":true
+				"disableScroll": true
 			}
-        }
-		,{
-            "path" : "pages/register/auditName",
-            "style" : {
+		}, {
+			"path": "pages/register/auditName",
+			"style": {
 				"navigationBarTitleText": "核名",
-				"disableScroll":true
+				"disableScroll": true
 			}
-        }
-		,{
-            "path" : "pages/register/robotCheckName",
-            "style" : {
+		}, {
+			"path": "pages/register/robotCheckName",
+			"style": {
 				"navigationBarTitleText": "核名-远程查询",
-				"disableScroll":true
+				"disableScroll": true
 			}
-        }
-        ,{
-            "path" : "pages/register/bindPhone",
-            "style" : {
+		}, {
+			"path": "pages/register/bindPhone",
+			"style": {
 				"navigationBarTitleText": "核名-绑定手机",
-				"disableScroll":true
+				"disableScroll": true
 			}
-        }
-		,{
-            "path" : "pages/register/getIdCard",
-            "style" : {
+		}, {
+			"path": "pages/register/getIdCard",
+			"style": {
 				"navigationBarTitleText": "核名-拍摄/上传身份证",
-				"disableScroll":true
+				"disableScroll": true
+			}
+		}, {
+			"path": "pages/register/registration",
+			"style": {
+				"navigationBarTitleText": "核名-注册登记/信息核对"
+			}
+		}, {
+			"path": "pages/register/agreement",
+			"style": {
+				"navigationBarTitleText": "核名-查看协议"
+			}
+		}
+	    ,{
+            "path" : "pages/main_index/main_index",
+            "style" : {
+				"navigationBarTitleText": "重写主页"
 			}
         }
     ],
@@ -111,8 +112,7 @@
 	},
 	"condition": { //模式配置，仅开发期间生效
 		"current": 0, //当前激活的模式（list 的索引项）
-		"list": [
-			{
+		"list": [{
 				"name": "index",
 				"path": "pages/index/index"
 			},
@@ -175,6 +175,18 @@
 			{
 				"name": "核名-拍摄/上传身份证-注册流程",
 				"path": "pages/register/getIdCard"
+			},
+			{
+				"name": "注册登记-注册流程",
+				"path": "pages/register/registration"
+			},
+			{
+				"name": "查看协议-注册流程",
+				"path": "pages/register/agreement"
+			},
+			{
+				"name": "重写主页",
+				"path": "pages/main_index/main_index"
 			}
 		]
 	}

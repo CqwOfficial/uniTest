@@ -15,6 +15,7 @@
 	global.isLogin = false;
 	// global.gFn = gFn;
 	global.setCompName = "";
+	global.clickRegister = false;
 </script>
 
 <style>
@@ -23,4 +24,5 @@
 <style>
 	@import url("./static/style/flex-config.css");
 	@import url("./static/style/zhushang.css");
+	@import url("./static/style/component.css");
 </style>

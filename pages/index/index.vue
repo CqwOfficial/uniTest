@@ -9,7 +9,7 @@
 			<index-decalre @applys="getThings"></index-decalre>
 		</view>
 		
-		<view class="flex-cnsc bgc-f5">
+		<view class="flex-cnsc bgc-f5" @click="linkToUrl">
 			<index-card :things="things" :title="title" class="boxf-b20"></index-card>
 			<index-card :things="things2" :title="title2" class="boxf-b20"></index-card>
 			<index-card :things="things3" :title="title3" class="boxf-b20"></index-card>
@@ -85,16 +85,42 @@
 		},
 		methods: {
 			getUserInfo:function(){
+				// 这个方法里写登陆接口
 				global.isLogin = true;
 				this.isLogin = global.isLogin;
 				console.log('get user info');
 				this.userName = "田昊"
 			},
 			getThings(n){
+				global.clickRegister = true;
+				uni.setStorage({
+					key:'indexClickRegister',
+					data: true
+				})
+				
 				uni.navigateTo({
 					url: n
 				});
+			},
+			linkToUrl(){
+				if(global.clickRegister == false){
+					uni.showModal({
+						title:'提示',
+						content:'您还未申请营业执照，点击确定开始申请',
+						success: (res) => {
+							if(res.confirm){
+								uni.navigateTo({
+									url: "../register/inputCdk"
+								});
+							}
+						}
+					})
+				}else{
+					return
+				}
+				
 			}
+			
 		},
 		components:{
 			indexIcon,
@@ -125,7 +151,7 @@
 	.get-user-info{
 		position: absolute;
 		width: 100vw;
-		height: 100vh;
+		height: 400upx;
 		background-color: rgba(255,255,255,0)!important;
 		z-index: 10000;
 	}

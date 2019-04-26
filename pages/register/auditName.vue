@@ -244,35 +244,39 @@
 								uni.showModal({
 									title: '提示',
 									content: '每天只有 2 次核名机会',
-									success: () => {
-										if (res.confirm) {
+									success: (res1) => {
+										if (res1.confirm) {
 											++_this.time;
 											uni.setStorage({
 												key: 'time',
-												data: _this.time
-											});
-											uni.showLoading({
-												title: "字号检查中",
-												success: ()=>{
-													// 调个接口查违规词
-													// uni.request({
-													// 	success: (res3) => {
-															// 接口没有，判断就注释掉了
-															uni.hideLoading();
-															// if(res3.data==false){
-																// _this.showTips = true; // 如果 违规词接口判断返回 false，则认为不通过，弹出提示
-															// }else{
-																// 否则 通过并跳转到下一阶段
-																uni.navigateTo({
-																	url: './robotCheckName'
-																})
-															// }
-															
-													// 	}
-													// })
+												data: _this.time,
+												success: () => {
+													uni.showLoading({
+														title: "字号检查中",
+														success: ()=>{
+															// 调个接口查违规词
+															// uni.request({
+															// 	success: (res3) => {
+																	// 接口没有，判断就注释掉了
+																	uni.hideLoading();
+																	// if(res3.data==false){
+																		// _this.showTips = true; // 如果 违规词接口判断返回 false，则认为不通过，弹出提示
+																	// }else{
+																		// 否则 通过并跳转到下一阶段
+																		console.log('ddd')
+																		uni.navigateTo({
+																			url: './robotCheckName'
+																		})
+																	// }
+																	
+															// 	}
+															// })
+														}
+													})
 												}
-											})
-										} else if (res.cancel) {
+											});
+											
+										} else if (res1.cancel) {
 											console.log('用户点击取消');
 										}
 									}

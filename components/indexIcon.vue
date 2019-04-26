@@ -24,7 +24,8 @@
 			};
 		},
 		props:['things','point'],
-
+		onLoad(){
+		},
 		methods:{
 			urlGo:function() {
 				switch (this.things.info){

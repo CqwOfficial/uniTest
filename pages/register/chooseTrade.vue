@@ -82,15 +82,17 @@
 			goNext: function(){
 				let arr = ["服装","箱包","鞋帽","母婴百货","美妆个护"];
 				let param ="";
-				console.log(this.choose)
 				for(let i=0;i<arr.length;i++){
 					if(this.choose[i]==false){
 						delete arr[i]
 					}
 				}
-				param = arr.join(' ')
-				console.log(param)
-				global.gFn.go("./auditName",param)
+				param = arr.join('')
+				// console.log(param)
+				// global.gFn.go("./auditName",param)
+				uni.navigateTo({
+					url:"./auditName?param="+param
+				})
 			}
 		}
 	}

@@ -46,10 +46,21 @@
 				let n = e.target.value;
 				if(n.length==6){
 					if(n==724724){
-						global.gFn.toast("验证通过","../../static/img/icon/ok.png");
-						global.gFn.go("/pages/more/bank/bank");
+						uni.showToast({
+							title:"验证通过",
+							image:"../../static/img/icon/ok.png",
+							success: () => {
+								uni.navigateTo({
+									url:"./chooseTrade"
+								})
+							}
+						})
 					}else{
-						global.gFn.toast("邀请码无效","../../static/img/icon/no.png");
+						uni.showToast({
+							title:"邀请码无效",
+							image:"../../static/img/icon/no.png"
+							
+						})
 					}
 				}
 				this.one = n.substr(0,1);
