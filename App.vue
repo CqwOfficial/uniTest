@@ -1,5 +1,5 @@
 <script>
-	import gFn from "./static/js/gFn.js"
+	import gfn from "./static/js/gFn.js"
 	export default {
 		onLaunch: function() {
 			console.log('App Launch')
@@ -13,7 +13,7 @@
 	}
 	global.time = 0;
 	global.isLogin = false;
-	// global.gFn = gFn;
+	global.gfn = gfn;
 	global.setCompName = "";
 	global.clickRegister = false;
 </script>
