@@ -2,18 +2,18 @@
 	<view class="flex-cnsc" @click="urlGo">
 		<view class="flex-cncc imgx100 cir poi" 
 			:data-text="point" 
-			:class="things.bg"
+			:class="getIcon(things).bg"
 			v-if="point">
-			<image class="imgx60" :src="things.src"></image>
+			<image class="imgx60" :src="getIcon(things).src"></image>
 		</view>
 		
 		<view class="flex-cncc imgx100 cir" 
-			:class="things.bg"
+			:class="getIcon(things).bg"
 			v-if="!point">
-			<image class="imgx60" :src="things.src"></image>
+			<image class="imgx60" :src="getIcon(things).src"></image>
 		</view>
 
-		<view class="fm-pfr flx42x30 col-3 boxf-t20">{{things.info}}</view>
+		<view class="fm-pfr flx42x30 col-3 boxf-t20">{{getIcon(things).info}}</view>
 	</view>
 </template>
 
@@ -28,7 +28,7 @@
 		},
 		methods:{
 			urlGo:function() {
-				switch (this.things.info){
+				switch (this.getIcon(this.things).info){
 					case "营业执照":
 						uni.navigateTo({
 							url: '/pages/business/license/license'
@@ -77,7 +77,59 @@
 					default:
 						break;
 				}
-			}
+			},
+			getIcon(num){
+				let _item = {};
+				switch (num){
+					case 1:
+							_item.src = "../static/img/index/business.png";
+							_item.bg = "bgc-f90";
+							_item.info = "营业执照";
+						return _item
+					case 2:
+							_item.src="../static/img/index/annual.png";
+							_item.bg="bgc-1ee";
+							_item.info="工商年报";
+						return _item
+					case 3:
+							_item.src="../static/img/index/cancel.png";
+							_item.bg="bgc-f30";
+							_item.info="注销/变更";
+						return _item
+					case 4:
+							_item.src="../static/img/index/invoice.png";
+							_item.bg="bgc-f80";
+							_item.info="开发票";
+						return _item
+					case 5:
+							_item.src="../static/img/index/manage.png";
+							_item.bg="bgc-4b8";
+							_item.info="发票管理";
+						return _item
+					case 6:
+							_item.src="../static/img/index/declare.png";
+							_item.bg="bgc-bf8";
+							_item.info="纳税申报";
+						return _item
+					case 7:
+							_item.src="../static/img/index/bank.png";
+							_item.bg="bgc-0997f7";
+							_item.info="银行开户";
+						return _item
+					case 8:
+							_item.src="../static/img/index/seal.png";
+							_item.bg="bgc-f80";
+							_item.info="公章管理";
+						return _item
+					case 9:
+							_item.src="../static/img/index/attendant.png";
+							_item.bg="bgc-0997f7";
+							_item.info="联系客服";
+						return _item
+					default:
+						break;
+				}
+			},
 			
 		}
 	}

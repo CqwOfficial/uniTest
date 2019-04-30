@@ -147,6 +147,9 @@
 .boxf-r40{margin-right: 40upx;}
 .boxf-r102{margin-right: 102upx;}
 
+
+.boxf-2040{margin: 20upx 40upx 20upx 40upx;}
+
 /*  both-end 用于行内文字两端对齐 */
 .justify-box{ text-align: justify; } /* 父元素添加 */
 .justify{ display: inline-block; width: 100%;} /* 父元素内的 span标签 添加 */
