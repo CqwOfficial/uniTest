@@ -150,7 +150,7 @@
 		color: #FFFFFF;
 		font-size: 22upx;
 		text-align: center;
-		line-height: 35upx;
+		line-height: 32upx;
 		font-family: "PingFangSC-Medium";
 		background-color: #FF3300;
 		z-index: 100;

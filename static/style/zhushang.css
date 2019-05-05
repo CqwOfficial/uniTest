@@ -96,8 +96,11 @@
 
 .boxf{box-sizing: border-box;}
 
+.boxf-140x50{width: 140upx;height: 50upx;}
+
 .boxf-w40{width: 40upx;}
 .boxf-w140{width: 140upx;}
+.boxf-w280{width: 280upx;}
 .boxf-w330{width: 330upx;}
 .boxf-w400{width: 400upx;}
 .boxf-w510{width: 510upx;}
@@ -112,6 +115,7 @@
 
 .boxf-h20{height: 20upx;}
 .boxf-h40{height: 40upx;}
+.boxf-h50{height: 50upx;}
 .boxf-h80{height: 80upx;}
 .boxf-h100{height: 100upx;}
 .boxf-h120{height: 120upx;}

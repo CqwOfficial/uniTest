@@ -73,7 +73,7 @@
 		methods: {
 		}
 	}
-</script>v
+</script>
 
 <style>
 	
