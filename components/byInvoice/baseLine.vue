@@ -3,7 +3,10 @@
 		<ul class="flex-cnsc">
 			<li class="flex-rnss">
 				<text space="emsp">{{line.title}}</text>
-				<view class="invoice-base">{{line.text}}</view>
+				<view class="invoice-base">
+					{{line.text}}
+					<slot class="slot"></slot>
+				</view>
 			</li>
 			
 		</ul>
@@ -54,5 +57,8 @@
 		font-size: 28upx;
 		font-family: "PingFangSC-Light";
 		color: #333333;
+	}
+	.slot{
+		
 	}
 </style>

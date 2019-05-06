@@ -9,11 +9,12 @@
 
 <style scoped>
 	aside{
-		position: relative;
+		position: absolute;
+		top: 0;
 		width: 750upx;
 		margin: auto;
 		overflow: hidden;
-		z-index: -50;
+		z-index: -1;
 	}
 	aside>div{
 		position: relative;
@@ -21,7 +22,7 @@
 		height: 100px;
 		text-align: center;
 		line-height: 50px;
-		z-index: -49;
+		z-index: -1;
 	}
 	aside:after{
 		position: absolute;
@@ -32,6 +33,6 @@
 		content: '';
 		border-radius: 0 0 50% 50%;
 		background-color: #0E8EFF;
-		z-index: -48;
+		z-index: -1;
 	}
 </style>

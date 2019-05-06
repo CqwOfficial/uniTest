@@ -81,6 +81,7 @@
 .border-bot-1px-s-f{border-bottom: 1px solid #FFFFFF;}
 .border-bot-1px-s-e5{border-bottom: 1px solid #E5E5E5;}
 
+.border-top-1px-d-e5{border-top: 1px dashed #E5E5E5;}
 .border-top-1px-d-0{border-top: 1px dashed #000000;}
 .border-top-1px-s-0{border-top: 1px solid #000000;}
 .border-top-1px-s-f{border-top: 1px solid #FFFFFF;}
@@ -161,6 +162,7 @@
 .boxf-b30{margin-bottom: 30upx;}
 .boxf-b40{margin-bottom: 40upx;}
 .boxf-b50{margin-bottom: 50upx;}
+.boxf-b100{margin-bottom: 100upx;}
 
 .boxf-m30{margin: 30upx;}
 .boxf-2040{margin: 20upx 40upx 20upx 40upx;}

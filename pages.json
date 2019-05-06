@@ -103,6 +103,66 @@
 				"navigationBarTitleText": "重写主页"
 			}
         }
+		,{
+            "path" : "pages/agency/index",
+            "style" : {
+				"navigationBarTitleText": "代办主页"
+			}
+        },
+		{
+            "path" : "pages/agency/business/index",
+            "style" : {
+				"navigationBarTitleText": "工商 - 主界面"
+			}
+        },
+		{
+            "path" : "pages/agency/tax/index",
+            "style" : {
+				"navigationBarTitleText": "税务 - 主界面"
+			}
+        },
+		{
+            "path" : "pages/agency/seal/index",
+            "style" : {
+				"navigationBarTitleText": "刻章 - 主界面"
+			}
+        },
+		{
+            "path" : "pages/agency/inv/index",
+            "style" : {
+				"navigationBarTitleText": "开发票- 主界面"
+			}
+        }
+        ,{
+            "path" : "pages/agency/business/wait/wait",
+            "style" : {
+				"navigationBarTitleText": "开发票- 待审核- 详情页"
+			}
+        }
+        ,{
+            "path" : "pages/agency/business/no/no",
+            "style" : {
+				"navigationBarTitleText": "开发票- 被驳回- 详情页"
+			}
+        }
+        ,{
+            "path" : "pages/agency/examine/examine",
+            "style" : {
+				"navigationBarTitleText": "开发票- 被驳回- 详情页- 核名流程"
+			}
+        },
+		{
+            "path" : "pages/agency/examine/robotCheckName",
+            "style" : {
+				"navigationBarTitleText": "开发票- 被驳回- 详情页- 开始核名"
+			}
+        },
+		{
+            "path" : "pages/agency/examine/getIdCard",
+            "style" : {
+				"navigationBarTitleText": "开发票- 被驳回- 详情页- 身份证检测"
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
@@ -187,6 +247,46 @@
 			{
 				"name": "重写主页",
 				"path": "pages/main_index/main_index"
+			},
+			{
+				"name": "代办主页",
+				"path": "pages/agency/index"
+			},
+			{
+				"name": "工商主页",
+				"path": "pages/agency/business/index"
+			},
+			{
+				"name": "刻章主页",
+				"path": "pages/agency/seal/index"
+			},
+			{
+				"name": "税务主页",
+				"path": "pages/agency/tax/index"
+			},
+			{
+				"name": "开发票主页",
+				"path": "pages/agency/inv/index"
+			},
+			{
+				"name": "开发票-待审核详情",
+				"path": "pages/agency/business/wait/wait"
+			},
+			{
+				"name": "开发票-被驳回详情",
+				"path": "pages/agency/business/no/no"
+			},
+			{
+				"name": "开发票-被驳回-重新核名流程",
+				"path": "pages/agency/examine/examine"
+			},
+			{
+				"name": "开发票-被驳回-重核^机器核名",
+				"path": "pages/agency/examine/robotCheckName"
+			},
+			{
+				"name": "开发票-被驳回-重核^身份证检测",
+				"path": "pages/agency/examine/getIdCard"
 			}
 		]
 	}

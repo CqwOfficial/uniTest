@@ -10,6 +10,9 @@ const store = new Vuex.Store({
 	mutations: {
 		change: function(state, nickname) {
 			state.nickname = nickname;
+		},
+		pushUserInfo: function(state, obj){
+			state.busUserInfo = obj;
 		}
 	}
 });
