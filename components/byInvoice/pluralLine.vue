@@ -3,9 +3,10 @@
 		<ul class="flex-cnsc">
 			<li class="flex-rnss">
 				<text space="emsp">{{line.title}}</text>
-				<view class="invoice-base">
-					{{line.text}}
-					<slot class="slot"></slot>
+				<view class="flex-cnss">
+					<block v-for="(item,i) in line.text" :key="i">
+						<text class="invoice-base">{{item.line}}</text>
+					</block>
 				</view>
 			</li>
 		</ul>
@@ -56,8 +57,5 @@
 		font-size: 28upx;
 		font-family: "PingFangSC-Light";
 		color: #333333;
-	}
-	.slot{
-		
 	}
 </style>

@@ -112,55 +112,107 @@
 		{
             "path" : "pages/agency/business/index",
             "style" : {
-				"navigationBarTitleText": "工商 - 主界面"
+				"navigationBarTitleText": "工商 - 主界面",
+				"disableScroll": true
 			}
         },
 		{
             "path" : "pages/agency/tax/index",
             "style" : {
-				"navigationBarTitleText": "税务 - 主界面"
+				"navigationBarTitleText": "税务 - 主界面",
+				"disableScroll": true
 			}
         },
 		{
             "path" : "pages/agency/seal/index",
             "style" : {
-				"navigationBarTitleText": "刻章 - 主界面"
+				"navigationBarTitleText": "刻章 - 主界面",
+				"disableScroll": true
 			}
         },
 		{
             "path" : "pages/agency/inv/index",
             "style" : {
-				"navigationBarTitleText": "开发票- 主界面"
+				"navigationBarTitleText": "开发票- 主界面",
+				"disableScroll": true
 			}
         }
         ,{
             "path" : "pages/agency/business/wait/wait",
             "style" : {
-				"navigationBarTitleText": "开发票- 待审核- 详情页"
+				"navigationBarTitleText": "工商- 待审核- 详情页"
 			}
         }
         ,{
             "path" : "pages/agency/business/no/no",
             "style" : {
-				"navigationBarTitleText": "开发票- 被驳回- 详情页"
+				"navigationBarTitleText": "工商- 被驳回- 详情页"
+			}
+        }
+		,{
+            "path" : "pages/agency/business/ok/ok",
+            "style" : {
+				"navigationBarTitleText": "工商- 已通过- 详情页"
+			}
+        }
+		,{
+            "path" : "pages/agency/business/end/end",
+            "style" : {
+				"navigationBarTitleText": "工商- 已完结- 详情页"
 			}
         }
         ,{
             "path" : "pages/agency/examine/examine",
             "style" : {
-				"navigationBarTitleText": "开发票- 被驳回- 详情页- 核名流程"
+				"navigationBarTitleText": "工商- 被驳回- 详情页- 核名流程"
 			}
         },
 		{
             "path" : "pages/agency/examine/robotCheckName",
             "style" : {
-				"navigationBarTitleText": "开发票- 被驳回- 详情页- 开始核名"
+				"navigationBarTitleText": "工商- 被驳回- 详情页- 开始核名"
 			}
         },
 		{
             "path" : "pages/agency/examine/getIdCard",
             "style" : {
-				"navigationBarTitleText": "开发票- 被驳回- 详情页- 身份证检测"
+				"navigationBarTitleText": "工商- 被驳回- 详情页- 身份证检测"
+			}
+        }
+        ,{
+            "path" : "pages/agency/seal/wait/wait",
+            "style" : {
+				"navigationBarTitleText": "刻章- 待刻- 详情页"
+			}
+        }
+        ,{
+            "path" : "pages/agency/seal/ok/ok",
+            "style" : {
+				"navigationBarTitleText": "刻章- 已刻- 详情页"
+			}
+        }
+        ,{
+            "path" : "pages/agency/tax/wait/wait",
+            "style" : {
+				"navigationBarTitleText": "税盘- 待领取- 详情页"
+			}
+        }
+        ,{
+            "path" : "pages/agency/tax/ok/ok",
+            "style" : {
+				"navigationBarTitleText": "税盘- 已领取- 详情页"
+			}
+        }
+		,{
+            "path" : "pages/agency/inv/wait/wait",
+            "style" : {
+				"navigationBarTitleText": "发票- 待领取- 详情页"
+			}
+        }
+        ,{
+            "path" : "pages/agency/inv/ok/ok",
+            "style" : {
+				"navigationBarTitleText": "发票- 已领取- 详情页"
 			}
         }
     ],
@@ -269,24 +321,56 @@
 				"path": "pages/agency/inv/index"
 			},
 			{
-				"name": "开发票-待审核详情",
+				"name": "工商-待审核详情",
 				"path": "pages/agency/business/wait/wait"
 			},
 			{
-				"name": "开发票-被驳回详情",
+				"name": "工商-被驳回详情",
 				"path": "pages/agency/business/no/no"
 			},
 			{
-				"name": "开发票-被驳回-重新核名流程",
+				"name": "工商-已通过详情",
+				"path": "pages/agency/business/ok/ok"
+			},
+			{
+				"name": "工商-已办结详情",
+				"path": "pages/agency/business/end/end"
+			},
+			{
+				"name": "工商-被驳回-重新核名流程",
 				"path": "pages/agency/examine/examine"
 			},
 			{
-				"name": "开发票-被驳回-重核^机器核名",
+				"name": "工商-被驳回-重核^机器核名",
 				"path": "pages/agency/examine/robotCheckName"
 			},
 			{
-				"name": "开发票-被驳回-重核^身份证检测",
+				"name": "工商-被驳回-重核^身份证检测",
 				"path": "pages/agency/examine/getIdCard"
+			},
+			{
+				"name": "刻章-待刻详情",
+				"path": "pages/agency/seal/wait/wait"
+			},
+			{
+				"name": "工商-已刻详情",
+				"path": "pages/agency/seal/ok/ok"
+			},
+			{
+				"name": "税盘-待领详情",
+				"path": "pages/agency/tax/wait/wait"
+			},
+			{
+				"name": "税盘-已领详情",
+				"path": "pages/agency/tax/ok/ok"
+			},
+			{
+				"name": "发票-待领详情",
+				"path": "pages/agency/inv/wait/wait"
+			},
+			{
+				"name": "发票-已领详情",
+				"path": "pages/agency/inv/ok/ok"
 			}
 		]
 	}
