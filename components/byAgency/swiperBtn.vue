@@ -38,7 +38,9 @@
 					start: true,
 					waiting: false,
 					end: false
-				}
+				},
+				ok:"审核已通过",
+				end:"材料已领取"
 			}
 		},
 		methods:{
@@ -55,7 +57,7 @@
 						if (res.confirm) {
 							_this.state.start = false;
 							_this.state.waiting = true;
-							_this.$emit("navi","审核已通过")
+							_this.$emit("navi",_this.ok)
 						} else if (res.cancel) {
 							
 						}
@@ -71,7 +73,7 @@
 						if (res.confirm) {
 							_this.state.start = true;
 							_this.state.waiting = false;
-							_this.$emit("navi","审核已通过")
+							_this.$emit("navi",_this.ok)
 						} else if (res.cancel) {
 							
 						}
@@ -87,7 +89,7 @@
 						if (res.confirm) {
 							_this.state.waiting = false;
 							_this.state.end = true;
-							_this.$emit("navi","材料已领取")
+							_this.$emit("navi",_this.end)
 						} else if (res.cancel) {
 							
 						}

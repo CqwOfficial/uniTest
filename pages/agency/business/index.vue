@@ -48,7 +48,7 @@
 								<swiper-box :box="item" @navi="naviOk">
 									<slot>
 										<view class="border-top-1px-d-e5">
-											<btn :num="i" @navi="putState"></btn>
+											<btn @navi="putState"></btn>
 										</view>
 									</slot>
 								</swiper-box>
@@ -464,6 +464,7 @@
 			},
 			putState(n){
 				// 到时候要用接口 把这个返回值存到数据库里，状态特别多，还是单一对象存储，我认为应该使用nosql，先暂时用sql试试
+				console.log(n)
 				this.naviState = n;
 			},
 			naviEnd(n){

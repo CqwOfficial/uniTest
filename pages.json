@@ -191,6 +191,12 @@
 				"navigationBarTitleText": "刻章- 已刻- 详情页"
 			}
         }
+		,{
+            "path" : "pages/agency/examine/getSealPhoto",
+            "style" : {
+				"navigationBarTitleText": "刻章- 待刻- 拍照上传印章"
+			}
+        }
         ,{
             "path" : "pages/agency/tax/wait/wait",
             "style" : {
@@ -353,8 +359,12 @@
 				"path": "pages/agency/seal/wait/wait"
 			},
 			{
-				"name": "工商-已刻详情",
+				"name": "刻章-已刻详情",
 				"path": "pages/agency/seal/ok/ok"
+			},
+			{
+				"name": "刻章-待刻-上传印章照",
+				"path": "pages/agency/examine/getSealPhoto"
 			},
 			{
 				"name": "税盘-待领详情",

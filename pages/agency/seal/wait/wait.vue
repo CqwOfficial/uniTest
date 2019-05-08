@@ -126,7 +126,11 @@
 			},
 			goUploadPage(){
 				// 这里要带着 onload > e 得到的 name和shop关键字传给拍印章页面
-				// common.navigateTo()
+				
+				let f = `?shop=${this.shopInfo.text}&name=${this.nameInfo.text}&tel=${this.telInfo.text}`
+				let c = "../../examine/getSealPhoto";
+				c = c+f;
+				common.navigateTo(c)
 			}
 		}
 	}
