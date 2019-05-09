@@ -69,7 +69,15 @@
 				console.log(this.officeSeal) //公章图片临时地址
 				console.log(this.invoiceSeal)
 				console.log(this.legalPersonSeal)
-				
+				uni.request({
+					url: 'http://localhost:8000/user', //仅为示例，并非真实接口地址。
+					header: {
+						'custom-header': 'hello' //自定义请求头信息
+					},
+					success: (res) => {
+						console.log(res);
+					}
+				});
 				
 				// 接着就是上传图片到服务器了
 // 				uni.chooseImage({
